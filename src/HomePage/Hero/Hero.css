@@ -1,0 +1,208 @@
+.hero-dash{
+    margin-top: 20px;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    width: 80vw;
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid rgb(223, 218, 218);
+}
+.hero-dash ul{
+    list-style: none;
+    width: 30%;
+}
+.hero-dash ul li{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 45px;
+}
+.thumbnail{
+    background-image: url('../../assets/hero/Banner.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.thumbnail h2{
+    font-weight: 400;
+    font-size: 28px;
+}
+.thumbnail h1{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 32px;
+}
+.thumbnail button{
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.user-info{
+    width: 20%;
+    margin-left: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+     height: 160px;
+    border-radius: 6px;
+    background-color: #E3F0FF;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+}
+.details img{
+    width: 40x;
+}
+.details h3{
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.details p{
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.join-button{
+    width: 180px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #0067FF;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    border: none;
+}
+.login-button{
+    width: 180px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 13px;
+    color: #0D6EFD;
+    border: none;
+}
+
+.offer{
+    height: 100px;
+    background-color: #F38332;
+    color: white;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 16px;
+    padding-right: 40px;
+    border-radius: 6px;
+}
+.quotes{
+    border-radius: 6px;
+    margin-top: 10px;
+    height: 100px;
+    font-weight: 400;
+    color: white;
+    background-color: #55BDC3;
+    font-size: 16px;
+    padding: 16px;
+    padding-right: 40px;
+}
+.deals{
+    margin-top: 30px;
+    border: 1px solid rgb(223, 218, 218);
+    background-color: white;
+    width: 80vw;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.deals-offer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.deals-offer h2{
+    font-weight: 600;
+    font-size: 20px;
+}
+.deals-offer h3{
+    font-weight: 400;
+    font-size: 16px;
+    color: #8B96A5;
+}
+
+.time{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 198px;
+}
+.time div{
+    display: flex;
+    background-color: #606060;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 45px;
+    border-radius: 4px;
+}
+.time div h4{
+    font-size: 16px;
+    color: white;
+    font-style: bold;
+    font-weight:700 ;
+}
+.time div p{
+    font-weight: 400;
+    color: white;
+    font-size: 12px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 180px;
+    border-left: 1px solid rgb(223, 218, 218);
+    justify-content: center;
+    align-items: center;
+}
+.product img{
+    height: 120px;
+}
+.product h4{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.product div{
+    background-color: #FFE3E3;
+    color: #EB001B;
+    font-weight: 500;
+    font-size: 14px;
+    height: 28px;
+    width: 60px;
+    border-radius: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+}

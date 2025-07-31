@@ -1,0 +1,26 @@
+.navbar{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100vw;
+}
+.menu{
+    margin-left: 140px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+.menu li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    font-weight: 500;
+    font-style: medium;
+    font-size: 16px;
+}

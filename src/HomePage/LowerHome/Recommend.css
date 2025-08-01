@@ -1,0 +1,48 @@
+.recommendation{
+    margin-top: 30px;
+    width: 80vw;
+    height: 696px;
+    box-sizing: border-box;
+}
+.recommendation h2{
+    font-weight: 600;
+    font-size: 24px;
+}
+.recommend-items{
+    display: grid;
+    width: 80vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    margin-top: 24px;
+    box-sizing: border-box;
+}
+.recommend-item{
+    box-sizing: border-box;
+    padding: 16px;
+    height: 310px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+
+}
+.img-div{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+.recommend-item img{
+    height: 170px;
+}
+.recommend-item h3{
+    font-weight: 500;
+    font-size: 16px;
+}
+.recommend-item p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #8B96A5;
+}

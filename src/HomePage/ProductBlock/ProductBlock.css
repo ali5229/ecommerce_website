@@ -56,6 +56,7 @@
     height: 140px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     border: 1px solid rgb(223, 218, 218);;
 }
 .individual div{
@@ -74,7 +75,6 @@
 }
 .individual img{
     height: 68px;
-    width:  70px;
     margin-top: 48px;
-    margin-left: 15px;
+    margin-right: 10px;
 }

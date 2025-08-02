@@ -7,7 +7,7 @@ import Footer from './Footer.jsx'
 function LowerHome() {
   return (
     <div className='lower-home'>
-      <Request />
+    <Request />
     <Recommend />
     <ServicesSuppliers />
     <Footer />

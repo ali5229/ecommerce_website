@@ -1,19 +1,32 @@
 import React from 'react'
-import Header from '../src/HomePage/Header/header'
-import Navbar from '../src/HomePage/Navbar/navbar'
-import Hero from '../src/HomePage/Hero/Hero'
-import ProductBlock from '../src/HomePage/ProductBlock/ProductBlock'
-import LowerHome from './HomePage/LowerHome/LowerHome'
+import HomePage from './HomePage/HomePage'
+import SiteHeader from './Header/SiteHeader'
+import ProductSearch from './ProductList/ProductSearch'
+import LowerHome from './HomePage/LowerHome/LowerHome.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element: 
+      <>
+          <SiteHeader/>
+          <HomePage/>
+          <LowerHome />
+      </>
+    },
+    {
+      path:'/ProductList/ProductSearch',
+      element:<>
+          <SiteHeader/>
+          <ProductSearch />
+          <LowerHome />
+      </>
+    },
+  ])
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <Header/>
-      <Navbar />
-      <Hero />
-      <ProductBlock />
-      <LowerHome />
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 

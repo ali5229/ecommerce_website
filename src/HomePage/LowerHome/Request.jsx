@@ -4,10 +4,9 @@ import Select from 'react-select';
 
 function Request() {
     const quantityOptions =[
-        { value: '0', label: 'Pcs' },
-        { value: '1', label: '1' },
-        { value: '2', label: '2' },
-        { value: '3', label: '3' },
+        { value: 'Pcs', label: 'Pcs' },
+        { value: 'Kg', label: 'Kg' },
+        { value: 'Tons', label: 'Tons' }
     ]
     const quantityStyles = {
   control: (provided) => ({
@@ -65,10 +64,10 @@ function Request() {
         </div>
         <div className="request-form">
             <h2>Send quote to suppliers</h2>
-            <input type="text" placeholder='What item you need?' />
+            <input type="text" placeholder='What item you need?' className='request-form-input' />
             <textarea name="textarea1" id="textarea1" placeholder='Type more details' cols={50} rows={4}></textarea>
             <div className='request-form-div'>
-                <div className='quan'>Quantity</div>
+                <input type="number" placeholder='Quantity' />
                 <Select options={quantityOptions} defaultValue={quantityOptions[0]} styles={quantityStyles}/>
             </div>
             <button>Send inquiry</button>

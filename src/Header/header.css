@@ -17,6 +17,7 @@
     color: #8CB7F5;
 }
 .searchbox{
+    height: 40px;
     display: flex;
     flex-direction: row;
     border: #0D6EFD 3px solid;
@@ -27,17 +28,22 @@
 .searchbox input{
     width: 400px;
     height: 30px;
-    padding-top: 5px;
+    padding-top: 15px;
     padding-left: 10px;
     border: none;
+    box-sizing: border-box;
     outline: none;
     font-size: 16px;
 }
 .searchbox button{
+    height: 100%;
     width: 100px;
     color: white;
     background-color: #0D6EFD;
     border: none;
+}
+.searchbox button:hover{
+    cursor: pointer;
 }
 .actions{
     display: flex;
@@ -50,6 +56,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.action:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 .action img{
     width: 20px;

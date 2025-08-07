@@ -72,7 +72,6 @@ function Footer() {
         </div>
         <div className="footer-end">
            <p>© 2023 Ecommerce. </p>
-            
         </div>
     </div>
   )

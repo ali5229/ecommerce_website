@@ -2,18 +2,19 @@
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     border: 1px solid #ccc;
     background-color: white;
     width: 100vw;
 }
 .menu{
-    margin-left: 140px;
+    margin-left: 60px;
     display: flex;
     flex-direction: row;
     list-style: none;
     align-items: center;
+    margin-right: 160px;
 }
 .menu li{
     display: flex;
@@ -23,4 +24,9 @@
     font-weight: 500;
     font-style: medium;
     font-size: 16px;
+}
+.menu li:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
 }

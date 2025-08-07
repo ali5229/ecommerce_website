@@ -1,14 +1,24 @@
-import React from 'react'
 
+import React, { useState } from 'react';
 import './header.css'
-import logo from '../../assets/header/logo-symbol.svg'
-import profile from '../../assets/header/profile.svg'
-import message from '../../assets/header/message.svg'
-import order from '../../assets/header/orders.svg'
-import cart from '../../assets/header/cart.svg'
+import logo from '../assets/header/logo-symbol.svg'
+import profile from '../assets/header/profile.svg'
+import message from '../assets/header/message.svg'
+import order from '../assets/header/orders.svg'
+import cart from '../assets/header/cart.svg'
 import Select, {components} from 'react-select'
+import { Link, useNavigate } from 'react-router-dom';
 
 function header() {
+
+        const [searchQuery, setSearchQuery] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState(null);
+        const navigate = useNavigate();
+        const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/ProductList/ProductSearch?q=${encodeURIComponent(searchQuery)}&category=${selectedCategory?.value || 'all'}`);
+  };
+
     const customStyles = {
      control: (provided) => ({
             ...provided,
@@ -31,20 +41,31 @@ function header() {
     ]
 
 
+
+
   return (
     <div className="container">
         <div className="title">
             <img src={logo} alt="" />
             <h1>Brand</h1>
         </div>
-        <div className="searchbox">
-            <input type="text" placeholder='Search' />
-            <Select options={options_cat} 
-                    defaultValue={options_cat[0]} 
-                    components={customComponents}
-                    styles={customStyles} />
-            <button>Search</button>
-        </div>
+        <form className="searchbox" onSubmit={handleSearch}>
+        <input 
+          type="text" 
+          placeholder='Search' 
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <Select 
+          options={options_cat} 
+          defaultValue={options_cat[0]}
+          components={customComponents}
+          styles={customStyles}
+          onChange={setSelectedCategory}
+        />
+        <button type="submit">Search</button>
+      </form>
+      
         <div className="actions">
             <div className="action">
                 <img src={profile} alt="" />

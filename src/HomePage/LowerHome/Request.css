@@ -43,7 +43,7 @@
     font-weight: 600;
     font-size: 20px;
 }
-.request-form input{
+.request-form-input{
     width: 440px;
     height: 40px;
     box-sizing: border-box;
@@ -74,12 +74,12 @@
 }
 .request-form-div {
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-direction: row;
     justify-content: flex-start;
 } 
-.quan{
-    width: 200px;
+.request-form-div input{
+    width: 50%;
     align-items: center;
     box-sizing: border-box;
     padding: 10px;

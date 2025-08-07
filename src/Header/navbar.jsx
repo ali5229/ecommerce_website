@@ -1,8 +1,8 @@
 import React from 'react'
 import Select, {components} from 'react-select'
 import './navbar.css'
-import menu from '../../assets/navbar/menu.svg'
-import flag from '../../assets/navbar/flag-icon.svg'
+import menu from '../assets/navbar/menu.svg'
+import flag from '../assets/navbar/flag-icon.svg'
 
 function navbar() {
      const customStyles = {

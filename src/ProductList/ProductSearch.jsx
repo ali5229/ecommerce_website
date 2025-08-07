@@ -6,6 +6,8 @@ import LeftArrow from '../assets/search_page/right-vector.png'
 import ProductList from './ProductList'
 import ProductGrid from './ProductGrid'
 import Pagination from './Pagination' 
+import GridVector from '../assets/search_page/grid-vector.png'
+import ListVector from '../assets/search_page/list-vector.png'
 
 
 function ProductSearch() {
@@ -80,9 +82,15 @@ function ProductSearch() {
     fetchProducts(page, searchQuery, selectedCategory);
   };
 
-  const handleViewModeToggle = () => {
-    setViewMode(viewMode === 'list' ? 'grid' : 'list');
-  };
+  // const handleViewModeToggle = () => {
+  //   setViewMode(viewMode === 'list' ? 'grid' : 'list');
+  // };
+  const handleGridMode=()=>{
+    setViewMode('grid')
+  }
+  const handleListMode =() =>{
+     setViewMode('list')
+  }
 
   // Load products when component mounts or URL changes
   useEffect(() => {
@@ -110,34 +118,43 @@ function ProductSearch() {
                   <li className="see-all">See all</li>
                 </ul>
                 <ul className="sidebar-options">
-                  <li className="heading">Category</li>
-                  <li>Mobile accessory</li>
-                  <li>Electronics</li>
-                  <li>Smartphones</li>
-                  <li>Modern tech</li>
+                  <li className="heading">Brands</li>
+                  <li><input type="checkbox" name="" id="" /> Samsung</li>
+                  <li><input type="checkbox" name="" id="" /> Huawei</li>
+                  <li><input type="checkbox" name="" id="" /> Apple</li>
+                  <li><input type="checkbox" name="" id="" /> Pocco</li>
                   <li className="see-all">See all</li>
                 </ul>
                 <ul className="sidebar-options">
-                  <li className="heading">Category</li>
-                  <li>Mobile accessory</li>
-                  <li>Electronics</li>
-                  <li>Smartphones</li>
-                  <li>Modern tech</li>
+                  <li className="heading">Features</li>
+                  <li><input type="checkbox" name="" id="" /> Metallic</li>
+                  <li><input type="checkbox" name="" id="" /> Placstic cover</li>
+                  <li><input type="checkbox" name="" id="" /> 8GB ram</li>
+                  <li><input type="checkbox" name="" id="" /> Super Power</li>
+                  <li><input type="checkbox" name="" id="" /> Large memory</li>
                   <li className="see-all">See all</li>
                 </ul>
+                <div className="sidebar-options">
+                  <p className="heading">Price range</p>
+                  
+                </div>
             </div>
       <div className="right-pan">
             <div className="controls">
-        <div className="view-mode-toggle">
-          <button onClick={handleViewModeToggle}>
-            {viewMode === 'list' ? 'Switch to Grid View' : 'Switch to List View'}
-          </button>
-        </div>
+              <div className="results-count">
+                Showing {(pagination.currentPage - 1) * pagination.itemsPerPage + 1}-
+                {Math.min(pagination.currentPage * pagination.itemsPerPage, pagination.totalItems)} of {pagination.totalItems} products
+             </div>    
+            <div className="view-mode-toggle">
+                  <button className={viewMode=='list' ? 'active':''} onClick={handleListMode}>
+                    <img src={ListVector} alt=""  />
+                  </button>
+                  <button className={viewMode=='grid' ? 'active':''} onClick={handleGridMode}>
+                    <img src={GridVector} alt="" />
+                  </button>
+                </div>
         
-        <div className="results-count">
-          Showing {(pagination.currentPage - 1) * pagination.itemsPerPage + 1}-
-          {Math.min(pagination.currentPage * pagination.itemsPerPage, pagination.totalItems)} of {pagination.totalItems} products
-        </div>
+        
       </div>
       
       {loading && <div className="loading">Loading products...</div>}

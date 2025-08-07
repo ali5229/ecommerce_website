@@ -1,6 +1,7 @@
 // src/components/ProductList.jsx
 import React from 'react';
 import stars from '../assets/search_page/stars.png'
+import { Link } from 'react-router-dom';
 
 const ProductList = ({ products }) => {
   return (
@@ -21,7 +22,13 @@ const ProductList = ({ products }) => {
                   <li style={{color:'#00B517'}}>Free Shipping</li>
                 </div>
                 <p className="description">{product.description}</p>
-                <p className="view-details">View details</p>
+                <Link 
+                  to={`/ProductDetails/ProductDetails/${product.id}`} 
+                  state={{ product }}
+                  className="view-details-btn"
+                >
+                  View Details
+                </Link>
                 <button className="add-to-cart">Add to Cart</button>
               </div>
             </li>

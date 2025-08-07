@@ -4,26 +4,44 @@ import SiteHeader from './Header/SiteHeader'
 import ProductSearch from './ProductList/ProductSearch'
 import LowerHome from './HomePage/LowerHome/LowerHome.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ProductDetails from './ProductDetails/ProductDetails.jsx'
 
+const MainLayout = ({ children }) => {
+  return (
+    <>
+      <SiteHeader />
+      {children}
+      <LowerHome />
+    </>
+  );
+};
 function App() {
   const router = createBrowserRouter([
     {
       path:'/',
       element: 
       <>
-          <SiteHeader/>
+          <MainLayout>
           <HomePage/>
-          <LowerHome />
+          </MainLayout>
       </>
     },
     {
       path:'/ProductList/ProductSearch',
       element:<>
-          <SiteHeader/>
+          <MainLayout>
           <ProductSearch />
-          <LowerHome />
+          </MainLayout>
       </>
     },
+    {
+      path:'/ProductDetails/ProductDetails/:productId',
+      element:<>
+          <MainLayout>
+          <ProductDetails/>
+          </MainLayout>
+      </>
+    }
   ])
   return (
     <RouterProvider router={router}/>

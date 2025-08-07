@@ -105,9 +105,10 @@
   object-fit: cover;
   border-radius: 4px;
 }
-.view-details{
+.view-details-btn{
   font-weight: 500;
   color: #0D6EFD;
+  cursor: pointer;
 }
 
 .product-list .product-details {

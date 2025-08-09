@@ -1,5 +1,6 @@
 // src/components/ProductGrid.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductGrid = ({ products }) => {
   return (
@@ -12,6 +13,13 @@ const ProductGrid = ({ products }) => {
               <h3>{product.name}</h3>
               <p className="category">{product.category}</p>
               <p className="price">${product.price.toFixed(2)}</p>
+              <Link 
+                  to={`/ProductDetails/ProductDetails/${product.id}`} 
+                  state={{ product }}
+                  className="view-details-btn"
+                >
+                  View Details
+                </Link>
               <button className="add-to-cart">Add to Cart</button>
             </div>
           ))}

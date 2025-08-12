@@ -18,7 +18,9 @@ function header() {
     e.preventDefault();
     navigate(`/ProductList/ProductSearch?q=${encodeURIComponent(searchQuery)}&category=${selectedCategory?.value || 'all'}`);
   };
-
+    function moveToCart(){
+        navigate('/CartPage/Cart');
+  }
     const customStyles = {
      control: (provided) => ({
             ...provided,
@@ -79,7 +81,7 @@ function header() {
                 <img src={order} alt="" />
                 <p>Orders</p>
             </div>
-            <div className="action">
+            <div className="action" onClick={moveToCart}>
                 <img src={cart} alt="" />
                 <p>My cart</p>
             </div>

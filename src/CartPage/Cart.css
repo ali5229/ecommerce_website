@@ -1,0 +1,109 @@
+.my-cart{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.my-cart .heading{
+    font-weight: 600;
+    font-size: 24px;
+}
+.cart-checkout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+    height: 552px;
+}
+.checkout-options{
+    width: 280px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.coupon{
+    background-color: white;
+    height: 110px;
+    width: 100%;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.coupon p{
+    font-weight: 400;
+    font-size: 16px;
+}
+.coupon-field{
+    width: 247px;
+    height: 40px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.coupon-field input{
+    width: 164px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #E0E0E0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.coupon-field button{
+    width: 80px;
+    background-color: white;
+    color: #0D6EFD;
+    border: 1px solid #DEE2E7;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    
+}
+.checkout-detail{
+    margin-top: 12px;
+    height: 300px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+     border: 1px solid #DEE2E7;
+    border-radius: 6px;
+}
+.amount-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 244px;
+}
+.amount-field p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #505050;
+    margin-bottom: 5px;
+}
+.total-amount-field{
+    width: 244px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #E4E4E4;
+    margin-top: 15px;
+    padding-top: 15px;
+    margin-bottom: 22px ;
+}
+.checkout-btn{
+    width: 248px;
+    height: 54px;
+    background-color: #00B517;
+    color:white;
+    font-weight: 500;
+    border-radius: 6px;
+    border: none;
+}

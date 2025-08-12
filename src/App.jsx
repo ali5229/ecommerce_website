@@ -5,6 +5,7 @@ import ProductSearch from './ProductList/ProductSearch'
 import LowerHome from './HomePage/LowerHome/LowerHome.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ProductDetails from './ProductDetails/ProductDetails.jsx'
+import Cart from './CartPage/Cart.jsx'
 
 const MainLayout = ({ children }) => {
   return (
@@ -40,6 +41,13 @@ function App() {
           <MainLayout>
           <ProductDetails/>
           </MainLayout>
+      </>
+    },{
+      path:'/CartPage/Cart',
+      element:<>
+      <MainLayout>
+        <Cart/>
+      </MainLayout>
       </>
     }
   ])

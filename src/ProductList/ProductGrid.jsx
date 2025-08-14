@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductGrid = ({ products }) => {
+const ProductGrid = ({ products, onAddToCart }) => {
   return (
     <div className="product-grid">
       {products.length > 0 ? (
@@ -20,7 +20,15 @@ const ProductGrid = ({ products }) => {
                 >
                   View Details
                 </Link>
-              <button className="add-to-cart">Add to Cart</button>
+              <button className="add-to-cart" onClick={() =>
+                  onAddToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1,
+                  })
+                }>Add to Cart</button>
             </div>
           ))}
         </div>

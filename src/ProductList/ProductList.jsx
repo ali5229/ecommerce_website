@@ -3,11 +3,8 @@ import React from 'react';
 import stars from '../assets/search_page/stars.png'
 import { Link,useNavigate } from 'react-router-dom';
 
-const ProductList = ({ products }) => {
-  const navigate = useNavigate();
-  function moveToCart(){
-        navigate('/CartPage/Cart');
-  }
+const ProductList = ({ products, onAddToCart }) => {
+  
   return (
     <div className="product-list">
       {products.length > 0 ? (
@@ -33,7 +30,13 @@ const ProductList = ({ products }) => {
                 >
                   View Details
                 </Link>
-                <button className="add-to-cart" onClick={moveToCart}>Add to Cart</button>
+                <button className="add-to-cart"  onClick={() => onAddToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                  })}>Add to Cart</button>
               </div>
             </li>
           ))}

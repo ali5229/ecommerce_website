@@ -10,7 +10,7 @@ import GridVector from '../assets/search_page/grid-vector.png'
 import ListVector from '../assets/search_page/list-vector.png'
 
 
-function ProductSearch() {
+function ProductSearch({ onAddToCart }) {
       const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -161,9 +161,9 @@ function ProductSearch() {
       {error && <div className="error">Error: {error}</div>}
       
       {viewMode === 'list' ? (
-        <ProductList products={products} />
+        <ProductList products={products} onAddToCart={onAddToCart}/>
       ) : (
-        <ProductGrid products={products} />
+        <ProductGrid products={products} onAddToCart={onAddToCart} />
       )}
       
       {pagination.totalPages > 1 && (
